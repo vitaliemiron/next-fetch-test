@@ -1,12 +1,11 @@
 import Image from 'next/image';
 import styles from './page.module.css';
+import 'server-only';
 
 export default async function Home() {
   const data2 = await fetch('https://cat-fact.herokuapp.com/facts/', {
     cache: 'no-store',
   });
-
-  const data = await data2.json();
 
   return (
     <main className={styles.main}>
