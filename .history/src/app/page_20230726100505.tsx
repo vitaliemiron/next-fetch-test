@@ -6,8 +6,6 @@ export default async function Home() {
     cache: 'no-store',
   });
 
-  const data = await data2.json();
-
   return (
     <main className={styles.main}>
       <div className={styles.description}>

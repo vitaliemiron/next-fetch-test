@@ -1,13 +1,7 @@
-import Image from 'next/image';
-import styles from './page.module.css';
+import Image from 'next/image'
+import styles from './page.module.css'
 
-export default async function Home() {
-  const data2 = await fetch('https://cat-fact.herokuapp.com/facts/', {
-    cache: 'no-store',
-  });
-
-  const data = await data2.json();
-
+export default function Home() {
   return (
     <main className={styles.main}>
       <div className={styles.description}>
@@ -97,5 +91,5 @@ export default async function Home() {
         </a>
       </div>
     </main>
-  );
+  )
 }
